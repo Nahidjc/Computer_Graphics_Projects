@@ -34,16 +34,16 @@ void display(void)
     }
 
 
-    for(i=0,i<=100; i++)
+    for(i=0,i<=30; i++)
     {
 
         glBegin(GL_QUADS);
         glColor3ub(255, 255, 255);
 
-        glVertex3f(170,62,0);
-        glVertex3f(172.5,62,0);
-        glVertex3f(172.5,64,0);
-        glVertex3f(170,64,0);
+        glVertex3f(170,62+i,0);
+        glVertex3f(172.5,62+i,0);
+        glVertex3f(172.5,64+i,0);
+        glVertex3f(170,64+i,0);
         glEnd();
 
         glBegin(GL_QUADS);
