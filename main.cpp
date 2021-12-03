@@ -34,7 +34,7 @@ void display(void)
     }
 
 
-    for(i=0,i<=30; i++)
+    for(i=0;i<=37; i=i+8)
     {
 
         glBegin(GL_QUADS);
@@ -49,28 +49,28 @@ void display(void)
         glBegin(GL_QUADS);
         glColor3ub(0, 0, 0);
 
-        glVertex3f(172.5,62,0);
-        glVertex3f(175,62,0);
-        glVertex3f(175,64,0);
-        glVertex3f(172.5,64,0);
+        glVertex3f(172.5,62+i,0);
+        glVertex3f(175,62+i,0);
+        glVertex3f(175,64+i,0);
+        glVertex3f(172.5,64+i,0);
         glEnd();
 
         glBegin(GL_QUADS);
         glColor3ub(255, 255, 255);
 
-        glVertex3f(175,62,0);
-        glVertex3f(177.5,62,0);
-        glVertex3f(175,64,0);
-        glVertex3f(177.5,64,0);
+        glVertex3f(175,62+i,0);
+        glVertex3f(177.5,62+i,0);
+        glVertex3f(177.5,64+i,0);
+        glVertex3f(175,64+i,0);
         glEnd();
 
         glBegin(GL_QUADS);
         glColor3ub(0, 0, 0);
 
-        glVertex3f(177.5,62,0);
-        glVertex3f(180,62,0);
-        glVertex3f(180,64,0);
-        glVertex3f(177.5,64,0);
+        glVertex3f(177.5,62+i,0);
+        glVertex3f(180,62+i,0);
+        glVertex3f(180,64+i,0);
+        glVertex3f(177.5,64+i,0);
         glEnd();
 
 
