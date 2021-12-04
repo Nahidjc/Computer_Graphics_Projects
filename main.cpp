@@ -11,7 +11,8 @@
 ////Position for object
 float sunX = 50;
 float sunY = 50;
-
+float meghX = 100;
+float meghY = 0;
 //////////////circle drawing function
 void DrawCircle(float cx, float cy, float r, int num_segments)
 {
@@ -32,10 +33,31 @@ void DrawCircle(float cx, float cy, float r, int num_segments)
 }
 
 
+/////////////////////////////cloud
+void cloud(int nasar)
+{
+    glColor3ub (200, 220, 220);
+    DrawCircle(56, 180, 5, 2000);
+    DrawCircle(62, 180, 7, 2000);
+    DrawCircle(69, 180, 5, 2000);
+
+    glColor3ub (200, 220, 220);
+    DrawCircle(116, 185, 5, 2000);
+    DrawCircle(122, 185, 7, 2000);
+    DrawCircle(129, 185, 5, 2000);
+
+    glColor3ub (200, 220, 220);
+    DrawCircle(300, 420, 25, 2000);
+    DrawCircle(330, 420, 35, 2000);
+    DrawCircle(360, 420, 25, 2000);
+    glEnd();
+    glFlush();
+}
+
 //Draw Sun
 void drawSun(int nasar)
 {
-    glColor3ub (250, 250, 0);
+    glColor3ub (255, 94, 0);
     DrawCircle(100, 190, 8, 500000);
 
     glEnd();
@@ -46,7 +68,7 @@ void drawSun(int nasar)
 //////////////////////sky
 void sky()
 {
-    glColor3ub (90, 196, 242);
+    glColor3ub (2, 193, 241);
     glBegin(GL_QUADS);
     glVertex2i(0, 160);
     glVertex2i(200, 160);
@@ -71,6 +93,7 @@ void display(void)
 
     sky();
     drawSun(1);
+    cloud(1);
     //School design
     glBegin(GL_QUADS);
     glColor3ub(115, 112, 112);
