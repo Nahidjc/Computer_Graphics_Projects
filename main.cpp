@@ -36,13 +36,24 @@ void DrawCircle(float cx, float cy, float r, int num_segments)
 void drawSun(int nasar)
 {
     glColor3ub (250, 250, 0);
-    DrawCircle(180, 180, 8, 500000);
+    DrawCircle(100, 190, 8, 500000);
 
     glEnd();
     glFlush();
 
 }
 
+//////////////////////sky
+void sky()
+{
+    glColor3ub (90, 196, 242);
+    glBegin(GL_QUADS);
+    glVertex2i(0, 160);
+    glVertex2i(200, 160);
+    glVertex2i(200, 200);
+    glVertex2i(0, 200);
+    glEnd();
+}
 
 
 
@@ -55,6 +66,10 @@ void display(void)
     /* clear all pixels */
     glClear(GL_COLOR_BUFFER_BIT);
     int i,j;
+
+
+
+    sky();
     drawSun(1);
     //School design
     glBegin(GL_QUADS);
@@ -181,8 +196,8 @@ int main(int argc, char** argv)
 
     glutInit(&argc, argv);
     glutInitDisplayMode (GLUT_SINGLE | GLUT_RGB);
-glutInitWindowSize (840, 680);
-glutInitWindowPosition (100, 150);
+    glutInitWindowSize (840, 680);
+    glutInitWindowPosition (100, 150);
 
     glutCreateWindow ("School Scenario");
     init ();
