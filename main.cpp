@@ -37,19 +37,14 @@ void DrawCircle(float cx, float cy, float r, int num_segments)
 void cloud(int nasar)
 {
     glColor3ub (200, 220, 220);
-    DrawCircle(56, 180, 5, 2000);
-    DrawCircle(62, 180, 7, 2000);
-    DrawCircle(69, 180, 5, 2000);
+    DrawCircle(170, 540, 15, 2000);
+    DrawCircle(186, 540, 22, 2000);
+    DrawCircle(205, 540, 15, 2000);
 
     glColor3ub (200, 220, 220);
-    DrawCircle(116, 185, 5, 2000);
-    DrawCircle(122, 185, 7, 2000);
-    DrawCircle(129, 185, 5, 2000);
-
-    glColor3ub (200, 220, 220);
-    DrawCircle(300, 420, 25, 2000);
-    DrawCircle(330, 420, 35, 2000);
-    DrawCircle(360, 420, 25, 2000);
+    DrawCircle(348, 540, 15, 2000);
+    DrawCircle(366, 540, 21, 2000);
+    DrawCircle(386, 540, 15, 2000);
     glEnd();
     glFlush();
 }
@@ -58,7 +53,7 @@ void cloud(int nasar)
 void drawSun(int nasar)
 {
     glColor3ub (255, 94, 0);
-    DrawCircle(100, 190, 8, 500000);
+    DrawCircle(300, 570, 24, 500000);
 
     glEnd();
     glFlush();
@@ -70,10 +65,47 @@ void sky()
 {
     glColor3ub (2, 193, 241);
     glBegin(GL_QUADS);
-    glVertex2i(0, 160);
-    glVertex2i(200, 160);
-    glVertex2i(200, 200);
-    glVertex2i(0, 200);
+    glVertex2i(0, 480);
+    glVertex2i(600, 480);
+    glVertex2i(600, 600);
+    glVertex2i(0, 600);
+    glEnd();
+}
+
+void tree()
+{
+    //////////////////////////////////////pata
+    glColor3ub (51, 204, 51);
+    DrawCircle(50, 280, 50, 2000);//1
+    DrawCircle(50, 320, 35, 3000);//1
+    glEnd();
+    glFlush();
+    ////////////////////////////////majher daal
+    glColor3ub (180, 180, 40);
+    glBegin(GL_QUADS);
+    glVertex2i(40, 155);
+    glVertex2i(60, 155);
+    glVertex2i(60, 245);
+    glVertex2i(40, 245);
+    glEnd();
+    //////////////////////////////////bam daal
+    glColor3ub (180, 180, 40);
+    glBegin(GL_QUADS);
+    glVertex2i(40, 245);
+    glVertex2i(50, 245);
+    glVertex2i(40, 270);
+    glVertex2i(30, 270);
+    glEnd();
+    /////////////////////////////////right daal
+    glColor3ub (180, 180, 40);
+    glBegin(GL_QUADS);
+    glVertex2i(50, 245);
+    glVertex2i(60, 245);
+    glVertex2i(70, 270);
+    glVertex2i(60, 270);
+    glEnd();
+    glFlush();
+
     glEnd();
 }
 
@@ -94,39 +126,8 @@ void display(void)
     sky();
     drawSun(1);
     cloud(1);
-    //School design
-    glBegin(GL_QUADS);
-    glColor3ub(115, 112, 112);
+    tree();
 
-    glVertex3f(130,140,0);
-    glVertex3f(145,140,0);
-    glVertex3f(145,142,0);
-    glVertex3f(130,142,0);
-    glEnd();
-
-    for(j=0; j<12; j=j+4)
-    {
-
-        glBegin(GL_QUADS);
-        glColor3ub(49, 36, 82);
-
-        glVertex3f(132+j,126,0);
-        glVertex3f(134+j,126,0);
-        glVertex3f(134+j,130,0);
-        glVertex3f(132+j,130,0);
-        glEnd();
-
-    }
-
-    //red mark
-    glBegin(GL_QUADS);
-    glColor3ub(232, 19, 19);
-
-    glVertex3f(130,125,0);
-    glVertex3f(145,125,0);
-    glVertex3f(145,140,0);
-    glVertex3f(130,140,0);
-    glEnd();
 
 
 
@@ -134,63 +135,63 @@ void display(void)
     glBegin(GL_QUADS);
     glColor3ub(152, 156, 153);
 
-    glVertex3f(0,60,0);
-    glVertex3f(200,60,0);
-    glVertex3f(200,100,0);
-    glVertex3f(0,100,0);
+    glVertex3f(0,180,0);
+    glVertex3f(600,180,0);
+    glVertex3f(600,300,0);
+    glVertex3f(0,300,0);
     glEnd();
 
     // Road divider line
-    for(i = 0; i <= 195; i=i+15)
+    for(i = 0; i <= 600; i=i+35)
     {
         glBegin(GL_QUADS);
         glColor3ub(255, 255, 255);
 
-        glVertex3f(i,80,0);
-        glVertex3f(i+4,80,0);
-        glVertex3f(i+4,81,0);
-        glVertex3f(i,81,0);
+        glVertex3f(i,240,0);
+        glVertex3f(i+10,240,0);
+        glVertex3f(i+10,242,0);
+        glVertex3f(i,242,0);
         glEnd();
     }
 
     // Zebra Crossing
-    for(i=0; i<=37; i=i+8)
+    for(i=0; i<=110; i=i+20)
     {
 
         glBegin(GL_QUADS);
         glColor3ub(255, 255, 255);
 
-        glVertex3f(170,62+i,0);
-        glVertex3f(172.5,62+i,0);
-        glVertex3f(172.5,64+i,0);
-        glVertex3f(170,64+i,0);
+        glVertex3f(510,186+i,0);
+        glVertex3f(516,186+i,0);
+        glVertex3f(516,191+i,0);
+        glVertex3f(510,191+i,0);
         glEnd();
 
         glBegin(GL_QUADS);
         glColor3ub(0, 0, 0);
 
-        glVertex3f(172.5,62+i,0);
-        glVertex3f(175,62+i,0);
-        glVertex3f(175,64+i,0);
-        glVertex3f(172.5,64+i,0);
+        glVertex3f(516,186+i,0);
+        glVertex3f(525,186+i,0);
+        glVertex3f(525,191+i,0);
+        glVertex3f(516,191+i,0);
         glEnd();
 
         glBegin(GL_QUADS);
         glColor3ub(255, 255, 255);
 
-        glVertex3f(175,62+i,0);
-        glVertex3f(177.5,62+i,0);
-        glVertex3f(177.5,64+i,0);
-        glVertex3f(175,64+i,0);
+        glVertex3f(525,186+i,0);
+        glVertex3f(535,186+i,0);
+        glVertex3f(535,191+i,0);
+        glVertex3f(525,191+i,0);
         glEnd();
 
         glBegin(GL_QUADS);
         glColor3ub(0, 0, 0);
 
-        glVertex3f(177.5,62+i,0);
-        glVertex3f(180,62+i,0);
-        glVertex3f(180,64+i,0);
-        glVertex3f(177.5,64+i,0);
+        glVertex3f(535,186+i,0);
+        glVertex3f(545,186+i,0);
+        glVertex3f(545,191+i,0);
+        glVertex3f(535,191+i,0);
         glEnd();
 
 
@@ -210,7 +211,7 @@ void init (void)
     glLoadIdentity();
 
 
-    glOrtho(0, 200, 0, 200, -10.0, 10.0);
+    glOrtho(0, 600, 0, 600, -10.0, 10.0);
 }
 
 
@@ -219,8 +220,8 @@ int main(int argc, char** argv)
 
     glutInit(&argc, argv);
     glutInitDisplayMode (GLUT_SINGLE | GLUT_RGB);
-    glutInitWindowSize (840, 680);
-    glutInitWindowPosition (100, 150);
+    glutInitWindowSize (1600, 1980);
+    glutInitWindowPosition (0, 0);
 
     glutCreateWindow ("School Scenario");
     init ();
