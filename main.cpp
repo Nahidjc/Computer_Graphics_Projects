@@ -76,33 +76,33 @@ void tree()
 {
     //////////////////////////////////////pata
     glColor3ub (51, 204, 51);
-    DrawCircle(50, 280, 50, 2000);//1
-    DrawCircle(50, 320, 35, 3000);//1
+    DrawCircle(455, 420, 27, 2000);//1
+    DrawCircle(455, 450, 17, 3000);//1
     glEnd();
     glFlush();
     //Midle daal
     glColor3ub (180, 180, 40);
     glBegin(GL_QUADS);
-    glVertex2i(500, 355);
-    glVertex2i(520, 355);
-    glVertex2i(520, 445);
-    glVertex2i(500, 445);
+    glVertex2i(450, 325);
+    glVertex2i(460, 325);
+    glVertex2i(460, 405);
+    glVertex2i(450, 405);
     glEnd();
     //bam daal
     glColor3ub (180, 180, 40);
     glBegin(GL_QUADS);
-    glVertex2i(40, 245);
-    glVertex2i(50, 245);
-    glVertex2i(40, 270);
-    glVertex2i(30, 270);
+    glVertex2i(450, 405);
+    glVertex2i(455, 405);
+    glVertex2i(450, 425);
+    glVertex2i(445, 425);
     glEnd();
     //right daal
     glColor3ub (180, 180, 40);
     glBegin(GL_QUADS);
-    glVertex2i(50, 245);
-    glVertex2i(60, 245);
-    glVertex2i(70, 270);
-    glVertex2i(60, 270);
+    glVertex2i(455, 405);
+    glVertex2i(460, 405);
+    glVertex2i(465, 425);
+    glVertex2i(460, 425);
     glEnd();
     glFlush();
 
@@ -174,37 +174,37 @@ surface();
         glBegin(GL_QUADS);
         glColor3ub(255, 255, 255);
 
-        glVertex3f(510,186+i,0);
-        glVertex3f(516,186+i,0);
-        glVertex3f(516,191+i,0);
-        glVertex3f(510,191+i,0);
+        glVertex3f(410,186+i,0);
+        glVertex3f(416,186+i,0);
+        glVertex3f(416,191+i,0);
+        glVertex3f(410,191+i,0);
         glEnd();
 
         glBegin(GL_QUADS);
         glColor3ub(0, 0, 0);
 
-        glVertex3f(516,186+i,0);
-        glVertex3f(525,186+i,0);
-        glVertex3f(525,191+i,0);
-        glVertex3f(516,191+i,0);
+        glVertex3f(416,186+i,0);
+        glVertex3f(425,186+i,0);
+        glVertex3f(425,191+i,0);
+        glVertex3f(416,191+i,0);
         glEnd();
 
         glBegin(GL_QUADS);
         glColor3ub(255, 255, 255);
 
-        glVertex3f(525,186+i,0);
-        glVertex3f(535,186+i,0);
-        glVertex3f(535,191+i,0);
-        glVertex3f(525,191+i,0);
+        glVertex3f(425,186+i,0);
+        glVertex3f(435,186+i,0);
+        glVertex3f(435,191+i,0);
+        glVertex3f(425,191+i,0);
         glEnd();
 
         glBegin(GL_QUADS);
         glColor3ub(0, 0, 0);
 
-        glVertex3f(535,186+i,0);
-        glVertex3f(545,186+i,0);
-        glVertex3f(545,191+i,0);
-        glVertex3f(535,191+i,0);
+        glVertex3f(435,186+i,0);
+        glVertex3f(445,186+i,0);
+        glVertex3f(445,191+i,0);
+        glVertex3f(435,191+i,0);
         glEnd();
 
 
