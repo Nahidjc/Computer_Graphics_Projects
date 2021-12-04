@@ -60,7 +60,7 @@ void drawSun(int nasar)
 
 }
 
-//////////////////////sky
+//sky
 void sky()
 {
     glColor3ub (2, 193, 241);
@@ -80,15 +80,15 @@ void tree()
     DrawCircle(50, 320, 35, 3000);//1
     glEnd();
     glFlush();
-    ////////////////////////////////majher daal
+    //Midle daal
     glColor3ub (180, 180, 40);
     glBegin(GL_QUADS);
-    glVertex2i(40, 155);
-    glVertex2i(60, 155);
-    glVertex2i(60, 245);
-    glVertex2i(40, 245);
+    glVertex2i(500, 355);
+    glVertex2i(520, 355);
+    glVertex2i(520, 445);
+    glVertex2i(500, 445);
     glEnd();
-    //////////////////////////////////bam daal
+    //bam daal
     glColor3ub (180, 180, 40);
     glBegin(GL_QUADS);
     glVertex2i(40, 245);
@@ -96,7 +96,7 @@ void tree()
     glVertex2i(40, 270);
     glVertex2i(30, 270);
     glEnd();
-    /////////////////////////////////right daal
+    //right daal
     glColor3ub (180, 180, 40);
     glBegin(GL_QUADS);
     glVertex2i(50, 245);
@@ -109,7 +109,20 @@ void tree()
     glEnd();
 }
 
+void surface(void)
+{
+    glBegin(GL_QUADS);
+    glColor3ub (122, 194, 153);
 
+    glVertex3f(0,300,0);
+    glVertex3f(600,300,0);
+    glVertex3f(600,480,0);
+    glVertex3f(0,480,0);
+    glEnd();
+
+
+
+}
 
 
 
@@ -122,7 +135,7 @@ void display(void)
     int i,j;
 
 
-
+surface();
     sky();
     drawSun(1);
     cloud(1);
