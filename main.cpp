@@ -75,144 +75,143 @@ void sky()
 void car(int h)
 {
    /////////////////////left body white
-    glColor3ub (255,255,255);
+ glColor3ub (255,255,255);
     glBegin(GL_POLYGON);
-    glVertex2f(15,20+h);
-    glVertex2f(15,28+h);
-    glVertex2f(58,28+h);
-    glVertex2f(60,20+h);
+    glVertex2f(15/2,20/2+h);
+    glVertex2f(15/2,104/2+h);
+    glVertex2f(190/2,104/2+h);
+    glVertex2f(195/2,20/2+h);
     glEnd();
 
-
-     /////////left body glass upper
+    /////////left body glass upper
      ////black
     glColor3ub (0,0,0);
     glBegin(GL_POLYGON);
-    glVertex2f(20,62+h);
-    glVertex2f(20,98+h);
-    glVertex2f(190.3,98+h);
-    glVertex2f(192.5,62+h);
+    glVertex2f(20/2,62/2+h);
+    glVertex2f(20/2,98/2+h);
+    glVertex2f(190/2,98/2+h);
+    glVertex2f(192.5/2,62/2+h);
     glEnd();
 
     ////sky blue glass
     glColor3ub (64,224,208);
     glBegin(GL_POLYGON);
-    glVertex2f(23,65+h);
-    glVertex2f(23,95+h);
-    glVertex2f(52,95+h);
-    glVertex2f(52,65+h);
+    glVertex2f(23/2,65/2+h);
+    glVertex2f(23/2,95/2+h);
+    glVertex2f(52/2,95/2+h);
+    glVertex2f(52/2,65/2+h);
     glEnd();
 
     glBegin(GL_POLYGON);
-    glVertex2f(53,65+h);
-    glVertex2f(53,95+h);
-    glVertex2f(76,95+h);
-    glVertex2f(76,65+h);
+    glVertex2f(53/2,65/2+h);
+    glVertex2f(53/2,95/2+h);
+    glVertex2f(76/2,95/2+h);
+    glVertex2f(76/2,65/2+h);
     glEnd();
 
     glBegin(GL_POLYGON);
-    glVertex2f(77,65+h);
-    glVertex2f(77,95+h);
-    glVertex2f(100,95+h);
-    glVertex2f(100,65+h);
+    glVertex2f(77/2,65/2+h);
+    glVertex2f(77/2,95/2+h);
+    glVertex2f(100/2,95/2+h);
+    glVertex2f(100/2,65/2+h);
     glEnd();
 
     glBegin(GL_POLYGON);
-    glVertex2f(101,65+h);
-    glVertex2f(101,95+h);
-    glVertex2f(124,95+h);
-    glVertex2f(124,65+h);
+    glVertex2f(101/2,65/2+h);
+    glVertex2f(101/2,95/2+h);
+    glVertex2f(124/2,95/2+h);
+    glVertex2f(124/2,65/2+h);
     glEnd();
 
     glBegin(GL_POLYGON);
-    glVertex2f(125,65+h);
-    glVertex2f(125,95+h);
-    glVertex2f(148,95+h);
-    glVertex2f(148,65+h);
+    glVertex2f(125/2,65/2+h);
+    glVertex2f(125/2,95/2+h);
+    glVertex2f(148/2,95/2+h);
+    glVertex2f(148/2,65/2+h);
     glEnd();
 
     glBegin(GL_POLYGON);
-    glVertex2f(149,65+h);
-    glVertex2f(149,95+h);
-    glVertex2f(172,95+h);
-    glVertex2f(172,65+h);
+    glVertex2f(149/2,65/2+h);
+    glVertex2f(149/2,95/2+h);
+    glVertex2f(172/2,95/2+h);
+    glVertex2f(172/2,65/2+h);
     glEnd();
 
     glBegin(GL_POLYGON);
-    glVertex2f(173,65+h);
-    glVertex2f(173,95+h);
-    glVertex2f(195.6,95+h);
-    glVertex2f(196.7,65+h);
+    glVertex2f(173/2,65/2+h);
+    glVertex2f(173/2,95/2+h);
+    glVertex2f(195.6/2,95/2+h);
+    glVertex2f(196.7/2,65/2+h);
     glEnd();
 
 
      /////////left body green below
     glColor3ub (0,255,0);
     glBegin(GL_POLYGON);
-    glVertex2f(20,20+h);
-    glVertex2f(20,62+h);
-    glVertex2f(192.5,62+h);
-    glVertex2f(195,20+h);
+    glVertex2f(20/2,20/2+h);
+    glVertex2f(20/2,62/2+h);
+    glVertex2f(192.5/2,62/2+h);
+    glVertex2f(195/2,20/2+h);
     glEnd();
 
 
     /////////////////////right body white
     glColor3ub (255,255,255);
     glBegin(GL_POLYGON);
-    glVertex2f(190,104+h);
-    glVertex2f(220,100+h);
-    glVertex2f(222.9756,97.4321+h);
-    glVertex2f(229.7981,87.1984+h);
-    glVertex2f(232.3565,78.9546+h);
-    glVertex2f(235.1992,70.7107+h);
-    glVertex2f(237.4734,63.60395+h);
-    glVertex2f(238.3262,56.4972+h);
-    glVertex2f(238.3262,48.8219+h);
-    glVertex2f(238.6105,36.0297+h);
-    glVertex2f(238.7242,29.0367+h);
-    glVertex2f(237.4734,23.0954+h);
-    glVertex2f(232.7829,20.9065+h);
-    glVertex2f(195,20+h);
+    glVertex2f(190/2,104/2+h);
+    glVertex2f(220/2,100/2+h);
+    glVertex2f(222.9756/2,97.4321/2+h);
+    glVertex2f(229.7981/2,87.1984/2+h);
+    glVertex2f(232.3565/2,78.9546/2+h);
+    glVertex2f(235.1992/2,70.7107/2+h);
+    glVertex2f(237.4734/2,63.60395/2+h);
+    glVertex2f(238.3262/2,56.4972/2+h);
+    glVertex2f(238.3262/2,48.8219/2+h);
+    glVertex2f(238.6105/2,36.0297/2+h);
+    glVertex2f(238.7242/2,29.0367/2+h);
+    glVertex2f(237.4734/2,23.0954/2+h);
+    glVertex2f(232.7829/2,20.9065/2+h);
+    glVertex2f(195/2,20/2+h);
     glEnd();
 
     //glass
     glColor3ub (0,0,0);
     glBegin(GL_POLYGON);
-    glVertex2f(190,98+h);
-    glVertex2f(214,98+h);
-    glVertex2f(217.9756,97.4321+h);
-    glVertex2f(224.7981,87.1984+h);
-    glVertex2f(227.3565,78.9546+h);
-    glVertex2f(230.1992,70.7107+h);
-    glVertex2f(232.4734,62+h);
-     glVertex2f(192.5,62+h);
+    glVertex2f(190/2,98/2+h);
+    glVertex2f(214/2,98/2+h);
+    glVertex2f(217.9756/2,97.4321/2+h);
+    glVertex2f(224.7981/2,87.1984/2+h);
+    glVertex2f(227.3565/2,78.9546/2+h);
+    glVertex2f(230.1992/2,70.7107/2+h);
+    glVertex2f(232.4734/2,62/2+h);
+     glVertex2f(192.5/2,62/2+h);
     glEnd();
 
     //sky glass
     glColor3ub (64,224,208);
     glBegin(GL_POLYGON);
-    glVertex2f(193,95+h);
-    glVertex2f(209,94+h);
-    glVertex2f(215.9756,95.4321+h);
-    glVertex2f(222.7981,87.1984+h);
-    glVertex2f(225.3565,78.9546+h);
-    glVertex2f(228.1992,70.7107+h);
-    glVertex2f(230.4734,65+h);
-     glVertex2f(194.5,65+h);
+    glVertex2f(193/2,95/2+h);
+    glVertex2f(209/2,94/2+h);
+    glVertex2f(215.9756/2,95.4321/2+h);
+    glVertex2f(222.7981/2,87.1984/2+h);
+    glVertex2f(225.3565/2,78.9546/2+h);
+    glVertex2f(228.1992/2,70.7107/2+h);
+    glVertex2f(230.4734/2,65/2+h);
+     glVertex2f(194.5/2,65/2+h);
     glEnd();
 
     //sky glass below green
 
     glColor3ub (0,255,0);
     glBegin(GL_POLYGON);
-    glVertex2f(196,20+h);
-    glVertex2f(193.5,62+h);
-    glVertex2f(233.3262,62+h);
-    glVertex2f(234.3262,45.8219+h);
-    glVertex2f(234.6105,36.0297+h);
-    glVertex2f(235.7242,29.0367+h);
-    glVertex2f(233.4734,23.0954+h);
-    glVertex2f(229.7829,20.7065+h);
+    glVertex2f(196/2,20/2+h);
+    glVertex2f(193.5/2,62/2+h);
+    glVertex2f(233.3262/2,62/2+h);
+    glVertex2f(234.3262/2,45.8219/2+h);
+    glVertex2f(234.6105/2,36.0297/2+h);
+    glVertex2f(235.7242/2,29.0367/2+h);
+    glVertex2f(233.4734/2,23.0954/2+h);
+    glVertex2f(229.7829/2,20.7065/2+h);
 
 
     glEnd();
@@ -221,19 +220,19 @@ void car(int h)
     /////////////
 
     glColor3ub (0,0,0);    ////////////////chakka
-    DrawCircle(50, 20+h, 10, 6000);//1
-    DrawCircle(71, 20+h, 10, 6000);//1
-    DrawCircle(160, 20+h, 10, 6000);//1
+    DrawCircle(50/2, 20/2+h, 5, 6000);//1
+    DrawCircle(71/2, 20/2+h, 5, 6000);//1
+    DrawCircle(160/2, 20/2+h, 5, 6000);//1
 
     glColor3ub (255,255,255);
-    DrawCircle(50, 20+h, 5, 6000);//1
-    DrawCircle(71, 20+h, 5, 6000);//1
-    DrawCircle(160, 20+h, 5, 6000);//1
+    DrawCircle(50/2, 20/2+h, 2.5, 6000);//1
+    DrawCircle(71/2, 20/2+h, 2.5, 6000);//1
+    DrawCircle(160/2, 20/2+h, 2.5, 6000);//1
 
     glColor3ub (0,0,0);
-    DrawCircle(50, 20+h, 2, 6000);//1
-    DrawCircle(71, 20+h, 2, 6000);//1
-    DrawCircle(160, 20+h,2, 6000);//1
+    DrawCircle(50/2, 20/2+h, 1, 6000);//1
+    DrawCircle(71/2, 20/2+h, 1, 6000);//1
+    DrawCircle(160/2, 20/2+h,1, 6000);//1
     glEnd();
 
 
@@ -380,7 +379,7 @@ void display(void)
     cloud(1);
     tree();
 
-car(240);
+car(250);
 
 
 
