@@ -75,7 +75,7 @@ void sky()
 void car(int h)
 {
    /////////////////////left body white
- glColor3ub (255,255,255);
+    glColor3ub (255,255,255);
     glBegin(GL_POLYGON);
     glVertex2f(15/2,20/2+h);
     glVertex2f(15/2,104/2+h);
@@ -96,50 +96,50 @@ void car(int h)
     ////sky blue glass
     glColor3ub (64,224,208);
     glBegin(GL_POLYGON);
-    glVertex2f(23/2,65/2+h);
-    glVertex2f(23/2,95/2+h);
+    glVertex2f(24/2,65/2+h);
+    glVertex2f(24/2,95/2+h);
     glVertex2f(52/2,95/2+h);
     glVertex2f(52/2,65/2+h);
     glEnd();
 
     glBegin(GL_POLYGON);
-    glVertex2f(53/2,65/2+h);
-    glVertex2f(53/2,95/2+h);
+    glVertex2f(54/2,65/2+h);
+    glVertex2f(54/2,95/2+h);
     glVertex2f(76/2,95/2+h);
     glVertex2f(76/2,65/2+h);
     glEnd();
 
     glBegin(GL_POLYGON);
-    glVertex2f(77/2,65/2+h);
-    glVertex2f(77/2,95/2+h);
+    glVertex2f(78/2,65/2+h);
+    glVertex2f(78/2,95/2+h);
     glVertex2f(100/2,95/2+h);
     glVertex2f(100/2,65/2+h);
     glEnd();
 
     glBegin(GL_POLYGON);
-    glVertex2f(101/2,65/2+h);
-    glVertex2f(101/2,95/2+h);
+    glVertex2f(102/2,65/2+h);
+    glVertex2f(102/2,95/2+h);
     glVertex2f(124/2,95/2+h);
     glVertex2f(124/2,65/2+h);
     glEnd();
 
     glBegin(GL_POLYGON);
-    glVertex2f(125/2,65/2+h);
-    glVertex2f(125/2,95/2+h);
+    glVertex2f(126/2,65/2+h);
+    glVertex2f(126/2,95/2+h);
     glVertex2f(148/2,95/2+h);
     glVertex2f(148/2,65/2+h);
     glEnd();
 
     glBegin(GL_POLYGON);
-    glVertex2f(149/2,65/2+h);
-    glVertex2f(149/2,95/2+h);
+    glVertex2f(150/2,65/2+h);
+    glVertex2f(150/2,95/2+h);
     glVertex2f(172/2,95/2+h);
     glVertex2f(172/2,65/2+h);
     glEnd();
 
     glBegin(GL_POLYGON);
-    glVertex2f(173/2,65/2+h);
-    glVertex2f(173/2,95/2+h);
+    glVertex2f(174/2,65/2+h);
+    glVertex2f(174/2,95/2+h);
     glVertex2f(195.6/2,95/2+h);
     glVertex2f(196.7/2,65/2+h);
     glEnd();
