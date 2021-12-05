@@ -72,9 +72,49 @@ void sky()
     glEnd();
 }
 
+///////////////////////////// birds
+void birds(int x)
+{
+    //////////////////////1st bird
+    glColor3ub (0, 0, 0);
+    DrawCircle(60, 500, 3, 1000);
+    DrawCircle(63, 500, 2, 1000);
+    glBegin(GL_LINES);
+    glLineWidth(5);
+    glVertex2i(60, 500);
+    glVertex2i(65, 507);
+
+    glVertex2i(60, 500);
+    glVertex2i(55, 507);
+    glEnd();
+///////////////////////2nd bird
+    DrawCircle(70, 510, 3, 1000);
+    DrawCircle(73, 510, 2, 1000);
+    glBegin(GL_LINES);
+    glVertex2i(70, 510);
+    glVertex2i(75, 517);
+
+    glVertex2i(70, 510);
+    glVertex2i(65, 517);
+    glEnd();
+//////////////////////////3rd bird
+    DrawCircle(75, 490, 3, 1000);
+    DrawCircle(78, 490, 2, 1000);
+    glBegin(GL_LINES);
+    glVertex2i(75, 490);
+    glVertex2i(80, 497);
+
+    glVertex2i(75, 490);
+    glVertex2i(70, 497);
+    glEnd();
+
+}
+
+
+
 void car(int h)
 {
-   /////////////////////left body white
+    /////////////////////left body white
     glColor3ub (255,255,255);
     glBegin(GL_POLYGON);
     glVertex2f(15/2,20/2+h);
@@ -84,7 +124,7 @@ void car(int h)
     glEnd();
 
     /////////left body glass upper
-     ////black
+    ////black
     glColor3ub (0,0,0);
     glBegin(GL_POLYGON);
     glVertex2f(20/2,62/2+h);
@@ -145,7 +185,7 @@ void car(int h)
     glEnd();
 
 
-     /////////left body green below
+    /////////left body green below
     glColor3ub (0,255,0);
     glBegin(GL_POLYGON);
     glVertex2f(20/2,20/2+h);
@@ -184,7 +224,7 @@ void car(int h)
     glVertex2f(227.3565/2,78.9546/2+h);
     glVertex2f(230.1992/2,70.7107/2+h);
     glVertex2f(232.4734/2,62/2+h);
-     glVertex2f(192.5/2,62/2+h);
+    glVertex2f(192.5/2,62/2+h);
     glEnd();
 
     //sky glass
@@ -197,7 +237,7 @@ void car(int h)
     glVertex2f(225.3565/2,78.9546/2+h);
     glVertex2f(228.1992/2,70.7107/2+h);
     glVertex2f(230.4734/2,65/2+h);
-     glVertex2f(194.5/2,65/2+h);
+    glVertex2f(194.5/2,65/2+h);
     glEnd();
 
     //sky glass below green
@@ -276,7 +316,8 @@ void tree()
 }
 
 
-void road(){
+void road()
+{
 
 
     //Highway road
@@ -378,8 +419,9 @@ void display(void)
     drawSun(1);
     cloud(1);
     tree();
+    birds(1);
 
-car(250);
+    car(250);
 
 
 
