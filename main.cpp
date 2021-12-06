@@ -493,6 +493,108 @@ void schoolRoad(){
 
 }
 
+void smallCar(){
+
+
+    //car main body
+    glBegin(GL_QUADS);
+    glColor3ub(245, 0, 16);
+
+    glVertex3f(170,220,0);
+    glVertex3f(205,220,0);
+    glVertex3f(205,230,0);
+    glVertex3f(170,230,0);
+    glEnd();
+    //car top body
+    glBegin(GL_QUADS);
+    glColor3ub(245, 0, 16);
+
+    glVertex3f(175,230,0);
+    glVertex3f(200,230,0);
+    glVertex3f(195,240,0);
+    glVertex3f(185,240,0);
+    glEnd();
+
+    //wheel
+    glColor3ub (0,0,0);
+    DrawCircle(180, 220, 4, 6000);
+    //wheel
+    glColor3ub (0,0,0);
+    DrawCircle(195, 220, 4, 6000);
+
+    //front glass
+    glBegin(GL_QUADS);
+    glColor3ub(194, 242, 241);
+
+    glVertex3f(188,230,0);
+    glVertex3f(198,230,0);
+    glVertex3f(193,238,0);
+    glVertex3f(188,238,0);
+    glEnd();
+
+     //front glass
+    glBegin(GL_QUADS);
+    glColor3ub(194, 242, 241);
+
+    glVertex3f(177,230,0);
+    glVertex3f(186.5,230,0);
+    glVertex3f(186.5,238,0);
+    glVertex3f(185,238,0);
+    glEnd();
+
+
+
+    // car 2
+
+    //car main body
+    glBegin(GL_QUADS);
+    glColor3ub(196, 110, 250);
+
+    glVertex3f(170+150,220,0);
+    glVertex3f(205+150,220,0);
+    glVertex3f(205+150,230,0);
+    glVertex3f(170+150,230,0);
+    glEnd();
+    //car top body
+    glBegin(GL_QUADS);
+    glColor3ub(196, 110, 250);
+
+    glVertex3f(175+150,230,0);
+    glVertex3f(200+150,230,0);
+    glVertex3f(195+150,240,0);
+    glVertex3f(185+150,240,0);
+    glEnd();
+
+    //wheel
+    glColor3ub (0,0,0);
+    DrawCircle(180+150, 220, 4, 6000);
+    //wheel
+    glColor3ub (0,0,0);
+    DrawCircle(195+150, 220, 4, 6000);
+
+    //front glass
+    glBegin(GL_QUADS);
+    glColor3ub(194, 242, 241);
+
+    glVertex3f(188+150,230,0);
+    glVertex3f(198+150,230,0);
+    glVertex3f(193+150,238,0);
+    glVertex3f(188+150,238,0);
+    glEnd();
+
+     //front glass
+    glBegin(GL_QUADS);
+    glColor3ub(194, 242, 241);
+
+    glVertex3f(177+150,230,0);
+    glVertex3f(186.5+150,230,0);
+    glVertex3f(186.5+150,238,0);
+    glVertex3f(185+150,238,0);
+    glEnd();
+
+
+}
+
 
 void smallTree(){
     glColor3ub (148, 124, 84);
@@ -675,6 +777,7 @@ void display(void)
     door();
     schoolRoad();
     smallTree();
+    smallCar();
 
 
     glFlush ();
