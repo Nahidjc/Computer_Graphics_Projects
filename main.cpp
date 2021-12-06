@@ -300,6 +300,16 @@ void flag()
     glFlush();
 
 
+//flag stand
+
+    glBegin(GL_QUADS);
+    glColor3ub(198,190,195);
+
+    glVertex3f(175,335,0);
+    glVertex3f(185,335,0);
+    glVertex3f(182,345,0);
+    glVertex3f(178,345,0);
+
 }
 
 void car(int h)
