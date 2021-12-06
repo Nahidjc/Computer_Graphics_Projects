@@ -111,7 +111,8 @@ void birds(int x)
 }
 
 
-void school(){
+void school()
+{
     glBegin(GL_QUADS);
     glColor3ub(203,83,68);
 
@@ -121,7 +122,7 @@ void school(){
     glVertex3f(230,340,0);
     glEnd();
 
-
+    //main building shape
     glBegin(GL_QUADS);
     glColor3ub(203,83,68);
 
@@ -130,6 +131,8 @@ void school(){
     glVertex3f(375,440,0);
     glVertex3f(235,440,0);
     glEnd();
+
+
 
     glBegin(GL_QUADS);
     glColor3ub(203,83,68);
@@ -160,8 +163,119 @@ void school(){
 
 }
 
+void door(){
 
-void flag(){
+for(int i=0;i<=25;i=i+19){
+
+  glBegin(GL_QUADS);
+    glColor3ub(78, 79, 75);
+
+    glVertex3f(288+i,345,0);
+    glVertex3f(306+i,345,0);
+    glVertex3f(306+i,388,0);
+    glVertex3f(288+i,388,0);
+    glEnd();
+
+}
+
+
+}
+
+void window(int x,int y)
+{
+    int i,j;
+    for(int i=6;i<=120;i=i+20){
+
+    glBegin(GL_QUADS);
+    glColor3ub(251, 255, 0);
+
+    glVertex3f(242+i,355,0);
+    glVertex3f(248+i,355,0);
+    glVertex3f(248+i,370,0);
+    glVertex3f(242+i,370,0);
+    glEnd();
+
+    glBegin(GL_QUADS);
+    glColor3ub(251, 255, 0);
+
+     glVertex3f(242+i+x,355,0);
+    glVertex3f(248+i+x,355,0);
+    glVertex3f(248+i+x,370,0);
+    glVertex3f(242+i+x,370,0);
+    glEnd();
+
+    glBegin(GL_QUADS);
+    glColor3ub(251, 255, 0);
+
+     glVertex3f(242+i,355+y,0);
+    glVertex3f(248+i,355+y,0);
+    glVertex3f(248+i,370+y,0);
+    glVertex3f(242+i,370+y,0);
+    glEnd();
+
+
+    glBegin(GL_QUADS);
+    glColor3ub(251, 255, 0);
+
+    glVertex3f(242+i+x,355+y,0);
+    glVertex3f(248+i+x,355+y,0);
+    glVertex3f(248+i+x,370+y,0);
+    glVertex3f(242+i+x,370+y,0);
+    glEnd();
+
+    }
+
+
+for(i=6,j=45;i<=120;i=i+20){
+
+    glBegin(GL_QUADS);
+    glColor3ub(251, 255, 0);
+
+    glVertex3f(242+i,355+j,0);
+    glVertex3f(248+i,355+j,0);
+    glVertex3f(248+i,370+j,0);
+    glVertex3f(242+i,370+j,0);
+    glEnd();
+
+    glBegin(GL_QUADS);
+    glColor3ub(251, 255, 0);
+
+     glVertex3f(242+i+x,355+j,0);
+    glVertex3f(248+i+x,355+j,0);
+    glVertex3f(248+i+x,370+j,0);
+    glVertex3f(242+i+x,370+j,0);
+    glEnd();
+
+    glBegin(GL_QUADS);
+    glColor3ub(251, 255, 0);
+
+     glVertex3f(242+i,355+y+j,0);
+    glVertex3f(248+i,355+y+j,0);
+    glVertex3f(248+i,370+y+j,0);
+    glVertex3f(242+i,370+y+j,0);
+    glEnd();
+
+
+    glBegin(GL_QUADS);
+    glColor3ub(251, 255, 0);
+
+    glVertex3f(242+i+x,355+y+j,0);
+    glVertex3f(248+i+x,355+y+j,0);
+    glVertex3f(248+i+x,370+y+j,0);
+    glVertex3f(242+i+x,370+y+j,0);
+    glEnd();
+
+    }
+
+
+
+
+
+
+}
+
+void flag()
+{
     glBegin(GL_QUADS);
     glColor3ub(0,128,0);
 
@@ -499,7 +613,9 @@ void display(void)
 
     car(250);
     school();
-flag();
+    flag();
+    window(7,17);
+    door();
 
 
     glFlush ();
