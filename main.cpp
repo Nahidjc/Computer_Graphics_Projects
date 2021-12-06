@@ -171,6 +171,12 @@ void flag(){
     glVertex3f(180,420,0);
     glEnd();
 
+    glColor3ub (255, 0, 0);
+    DrawCircle(190, 412, 5, 500);
+
+    glEnd();
+    glFlush();
+
 
 }
 
