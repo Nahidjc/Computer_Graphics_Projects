@@ -111,6 +111,68 @@ void birds(int x)
 }
 
 
+void school(){
+    glBegin(GL_QUADS);
+    glColor3ub(203,83,68);
+
+    glVertex3f(230,330,0);
+    glVertex3f(380,330,0);
+    glVertex3f(380,340,0);
+    glVertex3f(230,340,0);
+    glEnd();
+
+
+    glBegin(GL_QUADS);
+    glColor3ub(203,83,68);
+
+    glVertex3f(235,345,0);
+    glVertex3f(375,345,0);
+    glVertex3f(375,440,0);
+    glVertex3f(235,440,0);
+    glEnd();
+
+    glBegin(GL_QUADS);
+    glColor3ub(203,83,68);
+
+    glVertex3f(230,445,0);
+    glVertex3f(380,445,0);
+    glVertex3f(380,455,0);
+    glVertex3f(230,455,0);
+    glEnd();
+
+
+    glBegin(GL_TRIANGLES);
+    glColor3ub(203,83,68);
+
+    glVertex3f(245,455,0);
+    glVertex3f(365,455,0);
+    glVertex3f(305,505,0);
+    glEnd();
+
+
+    glColor3ub (190, 195, 199);
+    DrawCircle(305, 465, 12, 500000);
+
+    glEnd();
+    glFlush();
+
+
+
+}
+
+
+void flag(){
+    glBegin(GL_QUADS);
+    glColor3ub(0,128,0);
+
+    glVertex3f(180,405,0);
+    glVertex3f(200,405,0);
+    glVertex3f(200,420,0);
+    glVertex3f(180,420,0);
+    glEnd();
+
+
+}
 
 void car(int h)
 {
@@ -422,7 +484,8 @@ void display(void)
     birds(1);
 
     car(250);
-
+    school();
+flag();
 
 
     glFlush ();
