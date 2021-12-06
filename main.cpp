@@ -72,40 +72,40 @@ void sky()
     glEnd();
 }
 
-///////////////////////////// birds
+// birds
 void birds(int x)
 {
-    //////////////////////1st bird
+    //1st bird
     glColor3ub (0, 0, 0);
-    DrawCircle(60, 500, 3, 1000);
-    DrawCircle(63, 500, 2, 1000);
+    DrawCircle(60, 500, 1.5, 1000);
+    DrawCircle(62, 500, 1, 1000);
     glBegin(GL_LINES);
     glLineWidth(5);
     glVertex2i(60, 500);
-    glVertex2i(65, 507);
+    glVertex2i(62, 504);
 
     glVertex2i(60, 500);
-    glVertex2i(55, 507);
+    glVertex2i(58, 504);
     glEnd();
-///////////////////////2nd bird
-    DrawCircle(70, 510, 3, 1000);
-    DrawCircle(73, 510, 2, 1000);
+//2nd bird
+    DrawCircle(70, 510, 1.5, 1000);
+    DrawCircle(72, 510, 1, 1000);
     glBegin(GL_LINES);
     glVertex2i(70, 510);
-    glVertex2i(75, 517);
+    glVertex2i(72, 514);
 
     glVertex2i(70, 510);
-    glVertex2i(65, 517);
+    glVertex2i(68, 514);
     glEnd();
-//////////////////////////3rd bird
-    DrawCircle(75, 490, 3, 1000);
-    DrawCircle(78, 490, 2, 1000);
+//3rd bird
+    DrawCircle(80, 500, 1.5, 1000);
+    DrawCircle(82, 500, 1, 1000);
     glBegin(GL_LINES);
-    glVertex2i(75, 490);
-    glVertex2i(80, 497);
+    glVertex2i(80, 500);
+    glVertex2i(82, 504);
 
-    glVertex2i(75, 490);
-    glVertex2i(70, 497);
+    glVertex2i(80, 500);
+    glVertex2i(78, 504);
     glEnd();
 
 }
