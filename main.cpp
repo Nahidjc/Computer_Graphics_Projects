@@ -164,20 +164,22 @@ void school()
 
 }
 
-void door(){
+void door()
+{
 
-for(int i=0;i<=25;i=i+19){
+    for(int i=0; i<=25; i=i+19)
+    {
 
-  glBegin(GL_QUADS);
-    glColor3ub(78, 79, 75);
+        glBegin(GL_QUADS);
+        glColor3ub(78, 79, 75);
 
-    glVertex3f(288+i,345,0);
-    glVertex3f(306+i,345,0);
-    glVertex3f(306+i,388,0);
-    glVertex3f(288+i,388,0);
-    glEnd();
+        glVertex3f(288+i,345,0);
+        glVertex3f(306+i,345,0);
+        glVertex3f(306+i,388,0);
+        glVertex3f(288+i,388,0);
+        glEnd();
 
-}
+    }
 
 
 }
@@ -185,86 +187,88 @@ for(int i=0;i<=25;i=i+19){
 void window(int x,int y)
 {
     int i,j;
-    for(int i=6;i<=120;i=i+20){
+    for(int i=6; i<=120; i=i+20)
+    {
 
-    glBegin(GL_QUADS);
-    glColor3ub(251, 255, 0);
+        glBegin(GL_QUADS);
+        glColor3ub(251, 255, 0);
 
-    glVertex3f(242+i,355,0);
-    glVertex3f(248+i,355,0);
-    glVertex3f(248+i,370,0);
-    glVertex3f(242+i,370,0);
-    glEnd();
+        glVertex3f(242+i,355,0);
+        glVertex3f(248+i,355,0);
+        glVertex3f(248+i,370,0);
+        glVertex3f(242+i,370,0);
+        glEnd();
 
-    glBegin(GL_QUADS);
-    glColor3ub(251, 255, 0);
+        glBegin(GL_QUADS);
+        glColor3ub(251, 255, 0);
 
-     glVertex3f(242+i+x,355,0);
-    glVertex3f(248+i+x,355,0);
-    glVertex3f(248+i+x,370,0);
-    glVertex3f(242+i+x,370,0);
-    glEnd();
+        glVertex3f(242+i+x,355,0);
+        glVertex3f(248+i+x,355,0);
+        glVertex3f(248+i+x,370,0);
+        glVertex3f(242+i+x,370,0);
+        glEnd();
 
-    glBegin(GL_QUADS);
-    glColor3ub(251, 255, 0);
+        glBegin(GL_QUADS);
+        glColor3ub(251, 255, 0);
 
-     glVertex3f(242+i,355+y,0);
-    glVertex3f(248+i,355+y,0);
-    glVertex3f(248+i,370+y,0);
-    glVertex3f(242+i,370+y,0);
-    glEnd();
+        glVertex3f(242+i,355+y,0);
+        glVertex3f(248+i,355+y,0);
+        glVertex3f(248+i,370+y,0);
+        glVertex3f(242+i,370+y,0);
+        glEnd();
 
 
-    glBegin(GL_QUADS);
-    glColor3ub(251, 255, 0);
+        glBegin(GL_QUADS);
+        glColor3ub(251, 255, 0);
 
-    glVertex3f(242+i+x,355+y,0);
-    glVertex3f(248+i+x,355+y,0);
-    glVertex3f(248+i+x,370+y,0);
-    glVertex3f(242+i+x,370+y,0);
-    glEnd();
+        glVertex3f(242+i+x,355+y,0);
+        glVertex3f(248+i+x,355+y,0);
+        glVertex3f(248+i+x,370+y,0);
+        glVertex3f(242+i+x,370+y,0);
+        glEnd();
 
     }
 
 
-for(i=6,j=45;i<=120;i=i+20){
+    for(i=6,j=45; i<=120; i=i+20)
+    {
 
-    glBegin(GL_QUADS);
-    glColor3ub(251, 255, 0);
+        glBegin(GL_QUADS);
+        glColor3ub(251, 255, 0);
 
-    glVertex3f(242+i,355+j,0);
-    glVertex3f(248+i,355+j,0);
-    glVertex3f(248+i,370+j,0);
-    glVertex3f(242+i,370+j,0);
-    glEnd();
+        glVertex3f(242+i,355+j,0);
+        glVertex3f(248+i,355+j,0);
+        glVertex3f(248+i,370+j,0);
+        glVertex3f(242+i,370+j,0);
+        glEnd();
 
-    glBegin(GL_QUADS);
-    glColor3ub(251, 255, 0);
+        glBegin(GL_QUADS);
+        glColor3ub(251, 255, 0);
 
-     glVertex3f(242+i+x,355+j,0);
-    glVertex3f(248+i+x,355+j,0);
-    glVertex3f(248+i+x,370+j,0);
-    glVertex3f(242+i+x,370+j,0);
-    glEnd();
+        glVertex3f(242+i+x,355+j,0);
+        glVertex3f(248+i+x,355+j,0);
+        glVertex3f(248+i+x,370+j,0);
+        glVertex3f(242+i+x,370+j,0);
+        glEnd();
 
-    glBegin(GL_QUADS);
-    glColor3ub(251, 255, 0);
+        glBegin(GL_QUADS);
+        glColor3ub(251, 255, 0);
 
-     glVertex3f(242+i,355+y+j,0);
-    glVertex3f(248+i,355+y+j,0);
-    glVertex3f(248+i,370+y+j,0);
-    glVertex3f(242+i,370+y+j,0);
-    glEnd();
+        glVertex3f(242+i,355+y+j,0);
+        glVertex3f(248+i,355+y+j,0);
+        glVertex3f(248+i,370+y+j,0);
+        glVertex3f(242+i,370+y+j,0);
+        glEnd();
 
 
-    glBegin(GL_QUADS);
-    glColor3ub(251, 255, 0);
+        glBegin(GL_QUADS);
+        glColor3ub(251, 255, 0);
 
-    glVertex3f(242+i+x,355+y+j,0);
-    glVertex3f(248+i+x,355+y+j,0);
-    glVertex3f(248+i+x,370+y+j,0);
-    glVertex3f(242+i+x,370+y+j,0);
-    glEnd();
+        glVertex3f(242+i+x,355+y+j,0);
+        glVertex3f(248+i+x,355+y+j,0);
+        glVertex3f(248+i+x,370+y+j,0);
+        glVertex3f(242+i+x,370+y+j,0);
+        glEnd();
 
     }
 
@@ -480,7 +484,8 @@ void car(int h)
 }
 
 
-void schoolRoad(){
+void schoolRoad()
+{
     glBegin(GL_QUADS);
     glColor3ub(242,212,167);
 
@@ -493,7 +498,8 @@ void schoolRoad(){
 
 }
 
-void smallCar(){
+void smallCar()
+{
 
 
     //car main body
@@ -532,7 +538,7 @@ void smallCar(){
     glVertex3f(188,238,0);
     glEnd();
 
-     //front glass
+    //front glass
     glBegin(GL_QUADS);
     glColor3ub(194, 242, 241);
 
@@ -582,7 +588,7 @@ void smallCar(){
     glVertex3f(188+150,238,0);
     glEnd();
 
-     //front glass
+    //front glass
     glBegin(GL_QUADS);
     glColor3ub(194, 242, 241);
 
@@ -596,7 +602,8 @@ void smallCar(){
 }
 
 
-void smallTree(){
+void smallTree()
+{
     glColor3ub (148, 124, 84);
     glBegin(GL_LINES);
     glVertex2i(220, 340);
@@ -753,8 +760,169 @@ void surface(void)
 }
 
 
+void buildingSurface()
+{
+
+    glBegin(GL_QUADS);
+    glColor3ub (199, 237, 214);
+
+    glVertex3f(0,0,0);
+    glVertex3f(600,0,0);
+    glVertex3f(600,200,0);
+    glVertex3f(0,200,0);
+    glEnd();
+
+}
+
+void buildingOne()
+{
+
+    //building shape
+    glBegin(GL_QUADS);
+    glColor3ub (133, 129, 129);
+
+    glVertex3f(150,62,0);
+    glVertex3f(225,62,0);
+    glVertex3f(225,70,0);
+    glVertex3f(150,70,0);
+    glEnd();
 
 
+    glBegin(GL_QUADS);
+    glColor3ub (186, 184, 184);
+
+    glVertex3f(220,70,0);
+    glVertex3f(225,70,0);
+    glVertex3f(225,177,0);
+    glVertex3f(220,170,0);
+    glEnd();
+
+    //chad shape
+    glBegin(GL_QUADS);
+    glColor3ub (186, 184, 184);
+
+    glVertex3f(150,170,0);
+    glVertex3f(220,170,0);
+    glVertex3f(225,177,0);
+    glVertex3f(155,177,0);
+    glEnd();
+
+
+    //middle shape
+
+    glBegin(GL_QUADS);
+    glColor3ub (2, 247, 239);
+
+    glVertex3f(180,70,0);
+    glVertex3f(190,70,0);
+    glVertex3f(190,170,0);
+    glVertex3f(180,170,0);
+    glEnd();
+
+    //inside middle shape line
+
+    glColor3ub (1255, 0, 0);
+    glBegin(GL_LINES);
+    glVertex2i(180,90);
+    glVertex2i(190,90);
+    glEnd();
+
+    glColor3ub (255, 0, 0);
+    glBegin(GL_LINES);
+    glVertex2i(180,110);
+    glVertex2i(190,110);
+    glEnd();
+    glColor3ub (255, 0, 0);
+    glBegin(GL_LINES);
+    glVertex2i(180,130);
+    glVertex2i(190,130);
+    glEnd();
+    glColor3ub (255, 0, 0);
+    glBegin(GL_LINES);
+    glVertex2i(180,150);
+    glVertex2i(190,150);
+    glEnd();
+    //main shape
+    glBegin(GL_QUADS);
+    glColor3ub (22, 204, 245);
+
+    glVertex3f(150,70,0);
+    glVertex3f(175,70,0);
+    glVertex3f(175,170,0);
+    glVertex3f(150,170,0);
+    glEnd();
+
+
+    glBegin(GL_QUADS);
+    glColor3ub (22, 204, 245);
+
+    glVertex3f(150+45,70,0);
+    glVertex3f(175+45,70,0);
+    glVertex3f(175+45,170,0);
+    glVertex3f(150+45,170,0);
+    glEnd();
+
+    for(int j=0; j<50; j=j+45)
+    {
+
+
+        for(int i=5; i<=80; i=i+18)
+
+        {
+            //window
+            glBegin(GL_QUADS);
+            glColor3ub (255, 255, 255);
+
+            glVertex3f(153+j,73+i,0);
+            glVertex3f(161+j,73+i,0);
+            glVertex3f(161+j,85+i,0);
+            glVertex3f(153+j,85+i,0);
+            glEnd();
+            //line draw
+            glColor3ub (145, 140, 140);
+            glBegin(GL_LINES);
+            glVertex2i(157+j, 73+i);
+            glVertex2i(157+j, 85+i);
+            glEnd();
+            //line draw
+            glColor3ub (145, 140, 140);
+            glBegin(GL_LINES);
+            glVertex2i(153+j, 79+i);
+            glVertex2i(161+j, 79+i);
+            glEnd();
+
+            // Second Window
+
+            glBegin(GL_QUADS);
+            glColor3ub (255, 255, 255);
+
+            glVertex3f(163+j,73+i,0);
+            glVertex3f(171+j,73+i,0);
+            glVertex3f(171+j,85+i,0);
+            glVertex3f(163+j,85+i,0);
+            glEnd();
+            //line draw
+            glColor3ub (145, 140, 140);
+            glBegin(GL_LINES);
+            glVertex2i(167+j, 73+i);
+            glVertex2i(167+j, 85+i);
+            glEnd();
+            //line draw
+            glColor3ub (145, 140, 140);
+            glBegin(GL_LINES);
+            glVertex2i(163+j, 79+i);
+            glVertex2i(171+j, 79+i);
+            glEnd();
+
+
+        }
+
+
+    }
+
+
+
+}
 
 void display(void)
 {
@@ -778,8 +946,8 @@ void display(void)
     schoolRoad();
     smallTree();
     smallCar();
-
-
+    buildingSurface();
+    buildingOne();
     glFlush ();
 }
 
