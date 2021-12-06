@@ -33,6 +33,7 @@ void DrawCircle(float cx, float cy, float r, int num_segments)
 }
 
 
+
 /////////////////////////////cloud
 void cloud(int nasar)
 {
@@ -52,8 +53,8 @@ void cloud(int nasar)
 //Draw Sun
 void drawSun(int nasar)
 {
-    glColor3ub (255, 94, 0);
-    DrawCircle(300, 570, 24, 500000);
+    glColor3ub (255, 187, 0);
+    DrawCircle(300, 570, 24, 50000);
 
     glEnd();
     glFlush();
@@ -478,6 +479,52 @@ void car(int h)
 
 }
 
+
+void schoolRoad(){
+    glBegin(GL_QUADS);
+    glColor3ub(242,212,167);
+
+    glVertex3f(340,300,0);
+    glVertex3f(360,300,0);
+    glVertex3f(320,330,0);
+    glVertex3f(300,330,0);
+    glEnd();
+
+
+}
+
+
+void smallTree(){
+    glColor3ub (148, 124, 84);
+    glBegin(GL_LINES);
+    glVertex2i(220, 340);
+    glVertex2i(220, 370);
+    glEnd();
+
+    glColor3ub (51, 204, 51);
+    DrawCircle(220, 370, 9, 5000);//1
+    DrawCircle(220, 378, 6, 5000);//1
+    glEnd();
+    glFlush();
+
+    //2nd tree
+
+    glColor3ub (148, 124, 84);
+    glBegin(GL_LINES);
+    glVertex2i(390, 340);
+    glVertex2i(390, 370);
+    glEnd();
+
+    glColor3ub (51, 204, 51);
+    DrawCircle(390, 370, 9, 5000);//1
+    DrawCircle(390, 378, 6, 5000);//1
+    glEnd();
+    glFlush();
+
+}
+
+
+
 void tree()
 {
     //////////////////////////////////////pata
@@ -534,7 +581,7 @@ void road()
     for(int i = 0; i <= 600; i=i+35)
     {
         glBegin(GL_QUADS);
-        glColor3ub(255, 255, 255);
+        glColor3ub(210, 158, 63);
 
         glVertex3f(i,240,0);
         glVertex3f(i+10,240,0);
@@ -591,7 +638,7 @@ void road()
 void surface(void)
 {
     glBegin(GL_QUADS);
-    glColor3ub (122, 194, 153);
+    glColor3ub (199, 237, 214);
 
     glVertex3f(0,300,0);
     glVertex3f(600,300,0);
@@ -626,6 +673,8 @@ void display(void)
     flag();
     window(7,17);
     door();
+    schoolRoad();
+    smallTree();
 
 
     glFlush ();
