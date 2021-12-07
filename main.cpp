@@ -744,6 +744,62 @@ void road()
     }
 
 }
+
+void traficStand(){
+    //light stand
+        glBegin(GL_QUADS);
+        glColor3ub(82, 82, 82);
+
+        glVertex3f(425,300,0);
+        glVertex3f(426,300,0);
+        glVertex3f(426,320,0);
+        glVertex3f(425,320,0);
+        glEnd();
+
+       //stand box Red color
+        glBegin(GL_QUADS);
+        glColor3ub(255, 255, 255);
+
+        glVertex3f(421.5,318,0);
+        glVertex3f(430,318,0);
+        glVertex3f(432,325,0);
+        glVertex3f(420,325,0);
+        glEnd();
+
+        //stand circle
+        glColor3ub (255, 5, 5);
+        DrawCircle(426, 321, 2, 2000);
+
+        //stand box  color
+        glBegin(GL_QUADS);
+        glColor3ub(255, 255, 255);
+
+        glVertex3f(421.5,325,0);
+        glVertex3f(430,325,0);
+        glVertex3f(432,332,0);
+        glVertex3f(420,332,0);
+        glEnd();
+
+        //stand circle
+        glColor3ub (0, 255, 55);
+        DrawCircle(426, 328, 2, 2000);
+
+        //stand box green color
+        glBegin(GL_QUADS);
+        glColor3ub(255, 255, 255);
+
+        glVertex3f(421.5,332,0);
+        glVertex3f(430,332,0);
+        glVertex3f(432,339,0);
+        glVertex3f(420,339,0);
+        glEnd();
+
+        //stand circle
+        glColor3ub (0, 71, 2);
+        DrawCircle(426, 335, 2, 2000);
+
+
+}
 void surface(void)
 {
     glBegin(GL_QUADS);
@@ -948,6 +1004,7 @@ void display(void)
     smallCar();
     buildingSurface();
     buildingOne();
+    traficStand();
     glFlush ();
 }
 
