@@ -632,6 +632,21 @@ void smallTree()
 
 }
 
+void field()
+{
+    glColor3ub (0,255,0);
+    DrawCircle(80, 380, 70, 2000);//1
+
+
+    glColor3ub (180, 180, 40);
+    glBegin(GL_QUADS);
+    glVertex2i(90, 360);
+    glVertex2i(75, 360);
+    glVertex2i(75, 400);
+    glVertex2i(90, 400);
+    glEnd();
+
+}
 
 
 void tree()
@@ -745,58 +760,59 @@ void road()
 
 }
 
-void traficStand(){
+void traficStand()
+{
     //light stand
-        glBegin(GL_QUADS);
-        glColor3ub(82, 82, 82);
+    glBegin(GL_QUADS);
+    glColor3ub(82, 82, 82);
 
-        glVertex3f(425,300,0);
-        glVertex3f(426,300,0);
-        glVertex3f(426,320,0);
-        glVertex3f(425,320,0);
-        glEnd();
+    glVertex3f(425,300,0);
+    glVertex3f(426,300,0);
+    glVertex3f(426,320,0);
+    glVertex3f(425,320,0);
+    glEnd();
 
-       //stand box Red color
-        glBegin(GL_QUADS);
-        glColor3ub(255, 255, 255);
+    //stand box Red color
+    glBegin(GL_QUADS);
+    glColor3ub(255, 255, 255);
 
-        glVertex3f(421.5,318,0);
-        glVertex3f(430,318,0);
-        glVertex3f(432,325,0);
-        glVertex3f(420,325,0);
-        glEnd();
+    glVertex3f(421.5,318,0);
+    glVertex3f(430,318,0);
+    glVertex3f(432,325,0);
+    glVertex3f(420,325,0);
+    glEnd();
 
-        //stand circle
-        glColor3ub (255, 5, 5);
-        DrawCircle(426, 321, 2, 2000);
+    //stand circle
+    glColor3ub (255, 5, 5);
+    DrawCircle(426, 321, 2, 2000);
 
-        //stand box  color
-        glBegin(GL_QUADS);
-        glColor3ub(255, 255, 255);
+    //stand box  color
+    glBegin(GL_QUADS);
+    glColor3ub(255, 255, 255);
 
-        glVertex3f(421.5,325,0);
-        glVertex3f(430,325,0);
-        glVertex3f(432,332,0);
-        glVertex3f(420,332,0);
-        glEnd();
+    glVertex3f(421.5,325,0);
+    glVertex3f(430,325,0);
+    glVertex3f(432,332,0);
+    glVertex3f(420,332,0);
+    glEnd();
 
-        //stand circle
-        glColor3ub (0, 255, 55);
-        DrawCircle(426, 328, 2, 2000);
+    //stand circle
+    glColor3ub (0, 255, 55);
+    DrawCircle(426, 328, 2, 2000);
 
-        //stand box green color
-        glBegin(GL_QUADS);
-        glColor3ub(255, 255, 255);
+    //stand box green color
+    glBegin(GL_QUADS);
+    glColor3ub(255, 255, 255);
 
-        glVertex3f(421.5,332,0);
-        glVertex3f(430,332,0);
-        glVertex3f(432,339,0);
-        glVertex3f(420,339,0);
-        glEnd();
+    glVertex3f(421.5,332,0);
+    glVertex3f(430,332,0);
+    glVertex3f(432,339,0);
+    glVertex3f(420,339,0);
+    glEnd();
 
-        //stand circle
-        glColor3ub (0, 71, 2);
-        DrawCircle(426, 335, 2, 2000);
+    //stand circle
+    glColor3ub (0, 71, 2);
+    DrawCircle(426, 335, 2, 2000);
 
 
 }
@@ -804,12 +820,36 @@ void surface(void)
 {
     glBegin(GL_QUADS);
     glColor3ub (199, 237, 214);
-
     glVertex3f(0,300,0);
     glVertex3f(600,300,0);
     glVertex3f(600,480,0);
     glVertex3f(0,480,0);
     glEnd();
+
+    glBegin(GL_QUADS);
+    glColor3ub (199, 237, 214);
+    glVertex3f(0,150,0);
+    glVertex3f(600,150,0);
+    glVertex3f(600,180,0);
+    glVertex3f(0,180,0);
+    glEnd();
+
+    for(int i=0; i<600; i=i+50)
+    {
+        glColor3ub (148, 124, 84);
+        glBegin(GL_LINES);
+        glVertex2i(20+i, 160);
+        glVertex2i(20+i, 190);
+        glEnd();
+
+
+        glColor3ub (51, 204, 51);
+        DrawCircle(20+i, 190, 9, 5000);
+        DrawCircle(20+i, 198, 6, 5000);
+        glEnd();
+        glFlush();
+
+    }
 
 
 
@@ -980,6 +1020,20 @@ void buildingOne()
 
 }
 
+void river()
+{
+
+    glColor3ub (169, 242, 242);
+    glBegin(GL_QUADS);
+    glVertex2i(0, 0);
+    glVertex2i(600, 0);
+    glVertex2i(600, 150);
+    glVertex2i(0, 150);
+    glEnd();
+
+
+}
+
 void display(void)
 {
     /* clear all pixels */
@@ -1002,9 +1056,11 @@ void display(void)
     schoolRoad();
     smallTree();
     smallCar();
-    buildingSurface();
-    buildingOne();
+    //buildingSurface();
+    //buildingOne();
     traficStand();
+    river();
+    field();
     glFlush ();
 }
 
