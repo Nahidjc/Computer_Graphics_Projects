@@ -1023,7 +1023,7 @@ void buildingOne()
 void river()
 {
 
-    glColor3ub (169, 242, 242);
+    glColor3ub (142, 227, 227);
     glBegin(GL_QUADS);
     glVertex2i(0, 0);
     glVertex2i(600, 0);
@@ -1031,6 +1031,33 @@ void river()
     glVertex2i(0, 150);
     glEnd();
 
+//water
+
+    for(int i=0; i<600; i+=100)
+    {
+
+        glColor3ub (169, 242, 242);
+        glBegin(GL_LINES);
+        glVertex2i(100+i, 100);
+        glVertex2i(120+i, 100);
+        glEnd();
+
+        glColor3ub (169, 242, 242);
+        glBegin(GL_LINES);
+        glVertex2i(140+i, 110);
+        glVertex2i(155+i, 110);
+        glEnd();
+
+        glBegin(GL_LINES);
+        glVertex2i(120+i, 60);
+        glVertex2i(130+i, 60);
+        glEnd();
+
+        glBegin(GL_LINES);
+        glVertex2i(80+i, 80);
+        glVertex2i(100+i, 80);
+        glEnd();
+    }
 
 }
 
