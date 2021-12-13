@@ -1061,31 +1061,33 @@ void river()
 
 }
 
-void boat(){
+void boat()
+{
 
-    for(int i=0;i<600;i=i+400){
+    for(int i=0; i<600; i=i+400)
+    {
 
-    glColor3ub (26, 23, 33);
-    glBegin(GL_QUADS);
-    glVertex2i(40+i, 60);
-    glVertex2i(60+i, 60);
-    glVertex2i(70+i, 70);
-    glVertex2i(30+i, 70);
-    glEnd();
+        glColor3ub (26, 23, 33);
+        glBegin(GL_QUADS);
+        glVertex2i(40+i, 60);
+        glVertex2i(60+i, 60);
+        glVertex2i(70+i, 70);
+        glVertex2i(30+i, 70);
+        glEnd();
 
-    glColor3ub(0, 0, 153);
-    glBegin(GL_TRIANGLES);
-    glVertex2i(44+i, 72);
-    glVertex2i(50+i,72);
-    glVertex2i(50+i, 85);
-    glEnd();
+        glColor3ub(0, 0, 153);
+        glBegin(GL_TRIANGLES);
+        glVertex2i(44+i, 72);
+        glVertex2i(50+i,72);
+        glVertex2i(50+i, 85);
+        glEnd();
 
-    glColor3ub(0, 0, 153);
-    glBegin(GL_TRIANGLES);
-    glVertex2i(51+i, 72);
-    glVertex2i(60+i,72);
-    glVertex2i(51+i, 94);
-    glEnd();
+        glColor3ub(0, 0, 153);
+        glBegin(GL_TRIANGLES);
+        glVertex2i(51+i, 72);
+        glVertex2i(60+i,72);
+        glVertex2i(51+i, 94);
+        glEnd();
 
 
     }
@@ -1093,7 +1095,8 @@ void boat(){
 
 }
 
-void ship(){
+void ship()
+{
     //floor part
     glColor3ub (84, 84, 84);
     glBegin(GL_QUADS);
@@ -1114,7 +1117,7 @@ void ship(){
     glVertex2i(230, 68);
     glEnd();
 
- glColor3ub (84, 84, 84);
+    glColor3ub (84, 84, 84);
     glBegin(GL_QUADS);
     glVertex2i(350, 68);
     glVertex2i(370, 68);
@@ -1132,6 +1135,20 @@ void ship(){
     glVertex2i(335, 98);
     glVertex2i(240, 98);
     glEnd();
+
+    //window
+
+    for(int i=0; i<80; i+=14)
+    {
+        glColor3ub (230, 231, 251);
+        glBegin(GL_QUADS);
+        glVertex2i(245+i, 76);
+        glVertex2i(255+i, 76);
+        glVertex2i(255+i, 89);
+        glVertex2i(245+i, 89);
+        glEnd();
+    }
+
 
     //middle shape of floor
     glColor3ub (32, 34, 140);
@@ -1151,6 +1168,30 @@ void ship(){
     glVertex2i(322, 133);
     glVertex2i(240, 133);
     glEnd();
+
+    //window
+
+    for(int i=0; i<80; i+=14)
+    {
+        glColor3ub (230, 231, 251);
+        glBegin(GL_QUADS);
+        glVertex2i(245+i, 108);
+        glVertex2i(254+i, 108);
+        glVertex2i(254+i, 120);
+        glVertex2i(245+i, 120);
+        glEnd();
+    }
+
+
+     //Top part
+    glColor3ub (84, 84, 84);
+    glBegin(GL_QUADS);
+    glVertex2i(235, 133);
+    glVertex2i(330, 133);
+    glVertex2i(330, 138);
+    glVertex2i(235, 138);
+    glEnd();
+
 
 
 }
