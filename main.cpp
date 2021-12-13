@@ -1114,6 +1114,15 @@ void ship(){
     glVertex2i(230, 68);
     glEnd();
 
+ glColor3ub (84, 84, 84);
+    glBegin(GL_QUADS);
+    glVertex2i(350, 68);
+    glVertex2i(370, 68);
+    glVertex2i(375, 78);
+    glVertex2i(350, 78);
+    glEnd();
+
+
     //one floor
 
     glColor3ub (192, 217, 216);
