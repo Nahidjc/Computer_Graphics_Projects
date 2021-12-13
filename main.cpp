@@ -640,10 +640,10 @@ void field()
 
     glColor3ub (180, 180, 40);
     glBegin(GL_QUADS);
-    glVertex2i(90, 360);
+    glVertex2i(85, 360);
     glVertex2i(75, 360);
     glVertex2i(75, 400);
-    glVertex2i(90, 400);
+    glVertex2i(85, 400);
     glEnd();
 
 }
