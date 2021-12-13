@@ -1061,7 +1061,7 @@ void river()
 
 }
 
-void ship(){
+void boat(){
 
     for(int i=0;i<600;i=i+400){
 
@@ -1093,6 +1093,59 @@ void ship(){
 
 }
 
+void ship(){
+    //floor part
+    glColor3ub (84, 84, 84);
+    glBegin(GL_QUADS);
+    glVertex2i(250, 25);
+    glVertex2i(350, 25);
+    glVertex2i(360, 45);
+    glVertex2i(240, 45);
+    glEnd();
+
+
+    //middle part
+
+    glColor3ub (84, 84, 84);
+    glBegin(GL_QUADS);
+    glVertex2i(240, 48);
+    glVertex2i(360, 48);
+    glVertex2i(370, 68);
+    glVertex2i(230, 68);
+    glEnd();
+
+    //one floor
+
+    glColor3ub (192, 217, 216);
+    glBegin(GL_QUADS);
+    glVertex2i(240, 68);
+    glVertex2i(345, 68);
+    glVertex2i(335, 98);
+    glVertex2i(240, 98);
+    glEnd();
+
+    //middle shape of floor
+    glColor3ub (32, 34, 140);
+    glBegin(GL_QUADS);
+    glVertex2i(240, 98);
+    glVertex2i(335, 98);
+    glVertex2i(332, 103);
+    glVertex2i(240, 103);
+    glEnd();
+
+    //Two floor
+
+    glColor3ub (192, 217, 216);
+    glBegin(GL_QUADS);
+    glVertex2i(240, 103);
+    glVertex2i(332, 103);
+    glVertex2i(322, 133);
+    glVertex2i(240, 133);
+    glEnd();
+
+
+}
+
 void display(void)
 {
     /* clear all pixels */
@@ -1120,6 +1173,7 @@ void display(void)
     traficStand();
     river();
     field();
+    boat();
     ship();
     glFlush ();
 }
