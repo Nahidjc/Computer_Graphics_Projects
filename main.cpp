@@ -1061,6 +1061,38 @@ void river()
 
 }
 
+void ship(){
+
+    for(int i=0;i<600;i=i+400){
+
+    glColor3ub (26, 23, 33);
+    glBegin(GL_QUADS);
+    glVertex2i(40+i, 60);
+    glVertex2i(60+i, 60);
+    glVertex2i(70+i, 70);
+    glVertex2i(30+i, 70);
+    glEnd();
+
+    glColor3ub(0, 0, 153);
+    glBegin(GL_TRIANGLES);
+    glVertex2i(44+i, 72);
+    glVertex2i(50+i,72);
+    glVertex2i(50+i, 85);
+    glEnd();
+
+    glColor3ub(0, 0, 153);
+    glBegin(GL_TRIANGLES);
+    glVertex2i(51+i, 72);
+    glVertex2i(60+i,72);
+    glVertex2i(51+i, 94);
+    glEnd();
+
+
+    }
+
+
+}
+
 void display(void)
 {
     /* clear all pixels */
@@ -1088,6 +1120,7 @@ void display(void)
     traficStand();
     river();
     field();
+    ship();
     glFlush ();
 }
 
