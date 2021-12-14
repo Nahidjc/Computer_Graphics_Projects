@@ -12,9 +12,14 @@ float carX = 0;
 float carY = 0;
 float birdsX = 0;
 float birdsY = 0;
+
+float shipX = 0;
+float shipY = 0;
+
 //Dynamic position movement
 int carStatus = 1;
 int birdsStatus = 1;
+int shipStatus = 1;
 //////////////circle drawing function
 void DrawCircle(float cx, float cy, float r, int num_segments)
 {
@@ -1234,6 +1239,23 @@ void movebirds()
     glPopMatrix();
 }
 
+
+void moveShip()
+{
+
+    if (shipStatus == 1)
+    {
+        shipX += 4;
+    }
+    if (shipX>600)
+    {
+        shipX = -200;
+    }
+    glPushMatrix();
+    glTranslatef(shipX, shipY, 0);
+    ship();
+    glPopMatrix();
+}
 void display(void)
 {
 
@@ -1259,7 +1281,7 @@ void display(void)
     river();
     field();
     boat();
-    ship();
+    moveShip();
 
     glFlush ();
     glutPostRedisplay();
@@ -1304,6 +1326,17 @@ void keyboard(unsigned char key, int x, int y)
     {
         birdsStatus = 0;
     }
+
+    else if (key == 'S' || key == 's')  ////ship start
+
+    {
+        shipStatus = 1;
+    }
+    else if (key == 'T' || key == 't')  //bird stop
+
+    {
+        shipStatus = 0;
+    }
 }
 
 
@@ -1326,7 +1359,7 @@ int main(int argc, char** argv)
 {
 
     glutInit(&argc, argv);
-    glutInitDisplayMode (GLUT_SINGLE | GLUT_RGB);
+    glutInitDisplayMode (GLUT_DOUBLE | GLUT_RGB);
     glutInitWindowSize (840, 680);
     glutInitWindowPosition (0, 0);
 
