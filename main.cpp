@@ -16,10 +16,13 @@ float birdsY = 0;
 float shipX = 0;
 float shipY = 0;
 
+float boatX = 0;
+float boatY = 0;
 //Dynamic position movement
-int carStatus = 1;
-int birdsStatus = 1;
-int shipStatus = 1;
+int carStatus = 0;
+int birdsStatus = 0;
+int shipStatus = 0;
+int boatStatus = 0;
 //////////////circle drawing function
 void DrawCircle(float cx, float cy, float r, int num_segments)
 {
@@ -1210,7 +1213,7 @@ void movecar()
 {
     if (carStatus ==1)
     {
-        carX += 3; //speed
+        carX += 2; //speed
     }
     if (carX>600)
     {
@@ -1227,7 +1230,7 @@ void movebirds()
 
     if (birdsStatus == 1)
     {
-        birdsX += 4;
+        birdsX += 1;
     }
     if (birdsX>600)
     {
@@ -1245,7 +1248,7 @@ void moveShip()
 
     if (shipStatus == 1)
     {
-        shipX += 4;
+        shipX += 2;
     }
     if (shipX>600)
     {
@@ -1254,6 +1257,24 @@ void moveShip()
     glPushMatrix();
     glTranslatef(shipX, shipY, 0);
     ship();
+    glPopMatrix();
+}
+
+
+void moveBoat()
+{
+
+    if (boatStatus == 1)
+    {
+        boatX += 0.5;
+    }
+    if (boatX>600)
+    {
+        boatX = -200;
+    }
+    glPushMatrix();
+    glTranslatef(boatX, boatY, 0);
+    boat();
     glPopMatrix();
 }
 void display(void)
@@ -1280,7 +1301,7 @@ void display(void)
     traficStand();
     river();
     field();
-    boat();
+    moveBoat();
     moveShip();
 
     glFlush ();
@@ -1332,11 +1353,24 @@ void keyboard(unsigned char key, int x, int y)
     {
         shipStatus = 1;
     }
-    else if (key == 'T' || key == 't')  //bird stop
+    else if (key == 'T' || key == 't')  //Ship stop
 
     {
         shipStatus = 0;
     }
+
+    else if (key == 'N' || key == 'n')  ////boat start
+
+    {
+        boatStatus = 1;
+    }
+    else if (key == 'M' || key == 'm')  //boat stop
+
+    {
+        boatStatus = 0;
+    }
+
+
 }
 
 
