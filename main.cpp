@@ -291,12 +291,12 @@ void flag()
     glEnd();
 
     glColor3ub (255, 0, 0);
-    DrawCircle(190, 412, 5, 500);
+    DrawCircle(190, 412, 5, 50000);
     glEnd();
 
     glBegin(GL_QUADS);
     glColor3ub(25,26,26);
-
+//flag stand
     glVertex3f(179,340,0);
     glVertex3f(180,340,0);
     glVertex3f(180,420,0);
@@ -305,7 +305,7 @@ void flag()
     glFlush();
 
 
-//flag stand
+// ground stand
 
     glBegin(GL_QUADS);
     glColor3ub(198,190,195);
@@ -651,13 +651,13 @@ void field()
 
 void tree()
 {
-    //////////////////////////////////////pata
+    //pata
     glColor3ub (51, 204, 51);
     DrawCircle(455, 420, 27, 2000);//1
     DrawCircle(455, 450, 17, 3000);//1
     glEnd();
     glFlush();
-    //Midle daal
+    //Middle daal
     glColor3ub (180, 180, 40);
     glBegin(GL_QUADS);
     glVertex2i(450, 325);
@@ -665,7 +665,7 @@ void tree()
     glVertex2i(460, 405);
     glVertex2i(450, 405);
     glEnd();
-    //bam daal
+    //left daal
     glColor3ub (180, 180, 40);
     glBegin(GL_QUADS);
     glVertex2i(450, 405);
