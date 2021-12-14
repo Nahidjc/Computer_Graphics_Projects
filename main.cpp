@@ -1,18 +1,20 @@
 #include <GL/gl.h>
 #include <GL/glut.h>
 #include <windows.h>
+#include <iostream>
 #include<math.h>>
 # define PI           3.14159265358979323846
 
 
-#include <stdlib.h>
-#include <math.h>
-
 ////Position for object
-float sunX = 50;
-float sunY = 50;
-float meghX = 100;
-float meghY = 0;
+
+float carX = 0;
+float carY = 0;
+float birdsX = 0;
+float birdsY = 0;
+//Dynamic position movement
+int carStatus = 1;
+int birdsStatus = 1;
 //////////////circle drawing function
 void DrawCircle(float cx, float cy, float r, int num_segments)
 {
@@ -74,7 +76,7 @@ void sky()
 }
 
 // birds
-void birds(int x)
+void birds(int)
 {
     //1st bird
     glColor3ub (0, 0, 0);
@@ -317,8 +319,9 @@ void flag()
 
 }
 
-void car(int h)
+void car(int)
 {
+    int h=250;
     /////////////////////left body white
     glColor3ub (255,255,255);
     glBegin(GL_POLYGON);
@@ -1183,7 +1186,7 @@ void ship()
     }
 
 
-     //Top part
+    //Top part
     glColor3ub (84, 84, 84);
     glBegin(GL_QUADS);
     glVertex2i(235, 133);
@@ -1196,11 +1199,44 @@ void ship()
 
 }
 
+
+//move car
+void movecar()
+{
+    if (carStatus ==1)
+    {
+        carX += 3; //speed
+    }
+    if (carX>600)
+    {
+        carX = -20;
+    }
+    glPushMatrix();
+    glTranslatef(carX, carY, 0);
+    car(1);
+    glPopMatrix();
+}
+
+void movebirds()
+{
+
+    if (birdsStatus == 1)
+    {
+        birdsX += 4;
+    }
+    if (birdsX>600)
+    {
+        birdsX = -200;
+    }
+    glPushMatrix();
+    glTranslatef(birdsX, birdsY, 0);
+    birds(1);
+    glPopMatrix();
+}
+
 void display(void)
 {
-    /* clear all pixels */
-    glClear(GL_COLOR_BUFFER_BIT);
-    int i,j;
+
 
     road();
     surface();
@@ -1208,9 +1244,7 @@ void display(void)
     drawSun(1);
     cloud(1);
     tree();
-    birds(1);
 
-    car(250);
     school();
     flag();
     window(7,17);
@@ -1218,15 +1252,61 @@ void display(void)
     schoolRoad();
     smallTree();
     smallCar();
-    //buildingSurface();
-    //buildingOne();
+    movebirds();
+
+    movecar();
     traficStand();
     river();
     field();
     boat();
     ship();
+
     glFlush ();
+    glutPostRedisplay();
+    glutSwapBuffers();
+
 }
+
+
+
+void keyboard(unsigned char key, int x, int y)
+
+{
+
+
+
+
+
+
+
+
+
+    if (key == 'Z' || key == 'z')  ////car start
+
+    {
+        carStatus = 1;
+    }
+    else if (key == 'X' || key == 'x')  //car stop
+
+    {
+        carStatus = 0;
+    }
+
+
+
+    else if (key == 'B' || key == 'b')  ////bird start
+
+    {
+        birdsStatus = 1;
+    }
+    else if (key == 'V' || key == 'v')  //bird stop
+
+    {
+        birdsStatus = 0;
+    }
+}
+
+
 
 
 void init (void)
@@ -1247,13 +1327,15 @@ int main(int argc, char** argv)
 
     glutInit(&argc, argv);
     glutInitDisplayMode (GLUT_SINGLE | GLUT_RGB);
-    glutInitWindowSize (1600, 1980);
+    glutInitWindowSize (840, 680);
     glutInitWindowPosition (0, 0);
 
     glutCreateWindow ("School Scenario");
-    init ();
+    glutPostRedisplay();
     glutDisplayFunc(display);
 
+    glutKeyboardFunc(keyboard);
+    init ();
 
     glutMainLoop();
 

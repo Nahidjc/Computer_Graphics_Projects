@@ -1,10 +1,9 @@
 # depslib dependency file v1.0
-1639500272 source:c:\users\nahid\desktop\computer graphics project\graphics_project\main.cpp
+1639510963 source:c:\users\nahid\desktop\computer graphics project\graphics_project\main.cpp
 	<GL/gl.h>
 	<GL/glut.h>
 	<windows.h>
-	<math.h>
-	<stdlib.h>
+	<iostream>
 	<math.h>
 
 1453865572 c:\program files (x86)\codeblocks\mingw\include\gl\glut.h
