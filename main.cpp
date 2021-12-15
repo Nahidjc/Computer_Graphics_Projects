@@ -11,6 +11,9 @@
 float busX = 0;
 float busY = 0;
 
+float cloudX = 0;
+float cloudY = 0;
+
 float carX = 0;
 float carY = 0;
 
@@ -28,6 +31,7 @@ int birdsStatus = 0;
 int shipStatus = 0;
 int boatStatus = 0;
 int carStatus = 0;
+int cloudStatus = 0;
 //////////////circle drawing function
 void DrawCircle(float cx, float cy, float r, int num_segments)
 {
@@ -1213,6 +1217,9 @@ void ship()
 }
 
 
+
+
+
 //move bus
 void movebus()
 {
@@ -1300,6 +1307,24 @@ void moveBoat()
     boat();
     glPopMatrix();
 }
+
+void moveCloud()
+{
+
+    if (cloudStatus == 1)
+    {
+        cloudX -= 0.5;
+    }
+    if (cloudX>600)
+    {
+        cloudX = -200;
+    }
+    glPushMatrix();
+    glTranslatef(cloudX, cloudY, 0);
+    cloud(1);
+    glPopMatrix();
+}
+
 void display(void)
 {
 
@@ -1308,18 +1333,17 @@ void display(void)
     surface();
     sky();
     drawSun(1);
-    cloud(1);
+    moveCloud();
     tree();
 
+    smallTree();
+    movecar();
+    movebirds();
     school();
     flag();
     window(7,17);
     door();
     schoolRoad();
-    smallTree();
-    movecar();
-    movebirds();
-
     movebus();
     traficStand();
     river();
@@ -1338,13 +1362,6 @@ void display(void)
 void keyboard(unsigned char key, int x, int y)
 
 {
-
-
-
-
-
-
-
 
 
     if (key == 'Z' || key == 'z')  ////bus start
@@ -1394,7 +1411,7 @@ void keyboard(unsigned char key, int x, int y)
     }
 
 
-        else if (key == 'O' || key == 'o')  ////boat start
+    else if (key == 'O' || key == 'o')  ////boat start
 
     {
         carStatus = 1;
@@ -1405,6 +1422,17 @@ void keyboard(unsigned char key, int x, int y)
         carStatus = 0;
     }
 
+
+    else if (key == 'F' || key == 'f')  ////boat start
+
+    {
+        cloudStatus = 1;
+    }
+    else if (key == 'G' || key == 'g')  //boat stop
+
+    {
+        cloudStatus = 0;
+    }
 
 }
 
@@ -1428,7 +1456,7 @@ int main(int argc, char** argv)
 {
 
     glutInit(&argc, argv);
-    glutInitDisplayMode (GLUT_DOUBLE | GLUT_RGB);
+    glutInitDisplayMode (GLUT_SINGLE | GLUT_RGB);
     glutInitWindowSize (840, 680);
     glutInitWindowPosition (0, 0);
 
