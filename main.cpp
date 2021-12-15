@@ -8,8 +8,12 @@
 
 ////Position for object
 
+float busX = 0;
+float busY = 0;
+
 float carX = 0;
 float carY = 0;
+
 float birdsX = 0;
 float birdsY = 0;
 
@@ -19,10 +23,11 @@ float shipY = 0;
 float boatX = 0;
 float boatY = 0;
 //Dynamic position movement
-int carStatus = 0;
+int busStatus = 0;
 int birdsStatus = 0;
 int shipStatus = 0;
 int boatStatus = 0;
+int carStatus = 0;
 //////////////circle drawing function
 void DrawCircle(float cx, float cy, float r, int num_segments)
 {
@@ -327,7 +332,7 @@ void flag()
 
 }
 
-void car(int)
+void bus(int)
 {
     int h=250;
     /////////////////////left body white
@@ -1208,20 +1213,38 @@ void ship()
 }
 
 
+//move bus
+void movebus()
+{
+    if (busStatus ==1)
+    {
+        busX += 2; //speed
+    }
+    if (busX>600)
+    {
+        busX = -20;
+    }
+    glPushMatrix();
+    glTranslatef(busX, busY, 0);
+    bus(1);
+    glPopMatrix();
+}
+
+
 //move car
 void movecar()
 {
     if (carStatus ==1)
     {
-        carX += 2; //speed
+        carX -= 1; //speed
     }
     if (carX>600)
     {
-        carX = -20;
+        carX = 20;
     }
     glPushMatrix();
     glTranslatef(carX, carY, 0);
-    car(1);
+    smallCar();
     glPopMatrix();
 }
 
@@ -1294,10 +1317,10 @@ void display(void)
     door();
     schoolRoad();
     smallTree();
-    smallCar();
+    movecar();
     movebirds();
 
-    movecar();
+    movebus();
     traficStand();
     river();
     field();
@@ -1324,15 +1347,15 @@ void keyboard(unsigned char key, int x, int y)
 
 
 
-    if (key == 'Z' || key == 'z')  ////car start
+    if (key == 'Z' || key == 'z')  ////bus start
 
     {
-        carStatus = 1;
+        busStatus = 1;
     }
-    else if (key == 'X' || key == 'x')  //car stop
+    else if (key == 'X' || key == 'x')  //bus stop
 
     {
-        carStatus = 0;
+        busStatus = 0;
     }
 
 
@@ -1368,6 +1391,18 @@ void keyboard(unsigned char key, int x, int y)
 
     {
         boatStatus = 0;
+    }
+
+
+        else if (key == 'O' || key == 'o')  ////boat start
+
+    {
+        carStatus = 1;
+    }
+    else if (key == 'P' || key == 'p')  //boat stop
+
+    {
+        carStatus = 0;
     }
 
 
